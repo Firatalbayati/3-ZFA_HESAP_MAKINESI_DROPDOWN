@@ -1,0 +1,15 @@
+*&---------------------------------------------------------------------*
+*&  Include           ZFA_HP_MAKINESI_DROPDOWN_SCRN
+*&---------------------------------------------------------------------*
+
+SELECTION-SCREEN BEGIN OF BLOCK b1 WITH FRAME TITLE text-001.
+SELECTION-SCREEN SKIP.
+
+PARAMETERS: p_sayi1 TYPE numc7 OBLIGATORY,
+            p_sayi2 TYPE numc7 OBLIGATORY.
+
+SELECTION-SCREEN SKIP.
+PARAMETERS: islem TYPE c AS LISTBOX VISIBLE LENGTH 20. "Parameter
+
+SELECTION-SCREEN SKIP.
+SELECTION-SCREEN END OF BLOCK b1.

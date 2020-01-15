@@ -1,0 +1,51 @@
+*&---------------------------------------------------------------------*
+*& Report  ZFA_HESAP_MAKINESI_DROPDOWN
+*&
+*&---------------------------------------------------------------------*
+*&
+*&
+*&---------------------------------------------------------------------*
+
+REPORT zfa_hesap_makinesi_dropdown.
+
+INCLUDE zfa_hp_makinesi_dropdown_top.
+INCLUDE zfa_hp_makinesi_dropdown_scrn.
+INCLUDE zfa_hp_makinesi_dropdown_clss.
+INCLUDE zfa_hp_makinesi_dropdown_f01.
+
+
+AT SELECTION-SCREEN.
+
+
+INITIALIZATION.
+  CREATE OBJECT go_object
+    EXPORTING
+      iv_sayi1 = p_sayi1
+      iv_sayi2 = p_sayi2
+      iv_islem = islem.
+
+  go_object->islem( ).  " bu satır her zaman create objectin altına yazılır
+
+
+
+AT SELECTION-SCREEN ON islem.
+  go_object->drop_down( ).
+
+
+
+START-OF-SELECTION.
+  IF ( lv_selected_value = 'Mod' ).
+    go_object->mod( ).
+  ELSEIF ( lv_selected_value = 'Carpma' ).
+    go_object->carpma( ).
+  ELSEIF ( lv_selected_value = 'Bolme' ).
+    go_object->bolme( ).
+  ELSEIF ( lv_selected_value = 'Toplama' ).
+    go_object->toplama( ).
+  ELSEIF ( lv_selected_value = 'Cıkarma' ).
+    go_object->cikarma( ).
+  ENDIF.
+
+
+
+END-OF-SELECTION.

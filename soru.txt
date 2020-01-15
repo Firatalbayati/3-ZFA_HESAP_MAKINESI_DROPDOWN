@@ -1,0 +1,12 @@
+Basit Hesap Makinesi
+
+** İkinci bir örnek olarak buradaki 5 işlem radio buton yerine dropdown olarak seçilebilecek.
+
+
+2 parametre, 5 radio butonlu seçim ekranı tasarlanacak.
+Parametrelere en fazla 7 numerik karakter girilebilecek.
+4 Radio buton 4 işlemi temsil edecek, 1 radio buton ise Mod işlemini temsil edecek.
+Girilen iki parametre seçilen 4 işleme göre işleme sokulacak.
+Ekrana matematiksel olarak işlem ve sonucu yazılacak.
+
+Olası Matematiksel hatalar da kontrol edilip kullanıcıya bilgi verilecek.

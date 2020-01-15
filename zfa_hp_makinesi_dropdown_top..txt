@@ -1,0 +1,16 @@
+*&---------------------------------------------------------------------*
+*&  Include           ZFA_HP_MAKINESI_DROPDOWN_TOP
+*&---------------------------------------------------------------------*
+
+TYPE-POOLS: vrm.
+
+CLASS : gcl_class DEFINITION DEFERRED.  "TANIMLANMA TANIMLANMIŞ
+DATA : go_object TYPE REF TO gcl_class.
+
+DATA: gt_values  TYPE TABLE OF dynpread,
+      gs_values  TYPE dynpread,
+      gt_list    TYPE vrm_values,
+      gs_list    TYPE vrm_value,
+      gv_sonuc   TYPE i.
+
+DATA: lv_selected_value(10) TYPE c.
